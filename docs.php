@@ -1,26 +1,25 @@
 
+<?php
+include_once('conexao.php');
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <title>Avaliação</title>
+    <title>Documentação</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Oxygen:400,700" rel="stylesheet">
     <link rel='shortcut icon' type='images/x-icon' href='images/favicon.ico'>
     <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
     <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
-
-    <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
 
   </head>
   <body>
     
-    <header role="banner">
+  <header role="banner">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,9 +35,6 @@
                     <a class="nav-link" href="training.html">Treinamento</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="docs.php">Documentos</a>
-                  </li>
-                  <li class="nav-item">
                     <a class="nav-link" href="faq.html">FAQ</a>
                   </li>
                   <li class="nav-item">
@@ -47,33 +43,63 @@
                   <li class="nav-item">
                     <a class="nav-link" href="about.html">Equipe</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="test.html">Avaliação</a>
+                  </li>
             </ul>
           </div>
-
         </div>
       </nav>
     </header>
-    <!-- END header -->
+   
 
     <div class="inner-page">
-      <div class="slider-item" style="background-image: url('images/projetos.jpg');">
-        
+      <div class="slider-item" style="background-image: url('images/checklist.jpg');">
         <div class="container">
           <div class="row slider-text align-items-center justify-content-center">
             <div class="col-md-8 text-center col-sm-12 element-animate pt-5">
-              <h1 class="pt-5"><span>Avaliação de Desempenho</span></h1>
-              <p class="mb-5 w-75 pl-0">RH Dermage</p>
+              <h1 class="pt-5"><span>Documentação Admissional</span></h1>
             </div>
           </div>
         </div>
-
       </div>
     </div>
-    <!-- END slider -->
-    <section class="bg-light pb-5"> 
-      <!-- -->
+
+    <section class="section bg-light pb-5">
+      <div class="container mb-5">
+          <div class="row slider-text align-items-center justify-content-center">
+            <div class="col-md-8 text-center col-sm-12 element-animate">
+                  <h1>Envio de Email</h1>
+                  <span>Envio de email com link do formulário de documentação adimissional</span>
+            </div>
+          </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mb-5 order-2">
+            <form action="envio.php" method="post">
+              <div class="row">
+                <div class="col-md-9 form-group">
+                  <label><h5>Para</h5></label>
+                  <input type="email" name="destinatario" class="form-control" placeholder="Digite o E-mail de recebimento" required>
+                </div>
+                <div class="col-md-9 form-group">
+                  <label><h5>Assunto</h5></label>
+                  <input type="text" name="assunto" class="form-control" placeholder="Digite o Assunto" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="submit" value="Enviar" class="btn btn-primary px-3 py-3">
+                </div>
+              </div>              
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
-    
+
     <div class="container">
       <div class="row mb-2">
         <div class="col-md-5 mb-5">
@@ -90,7 +116,7 @@
         <div class="col-md-5 mb-5 pl-md-5">
           <h3>Contato</h3>
           <ul class="list-unstyled footer-link">
-            <li class="d-block">
+
             <li class="d-block"><span class="d-block">Telefone:</span><span class="ion-ios-telephone-outline 12 text-primary">  </span>(21)2529-9900</span></li>
             
             <li class="d-block"><span class="d-block">Celular:</span><span class="ion-social-whatsapp-outline 12 text-primary">  </span>(21)99627-9337</span></li>
@@ -115,10 +141,6 @@
           </div>
       </div>
   </footer>
-  <!-- END footer -->
-
-    <!-- loader -->
-    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
 
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -126,9 +148,6 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
-    <script src="js/main.js"></script>
-
-    <script src="js/main.js"></script>
-    
+    <script src="js/main.js"></script>    
   </body>
 </html>
