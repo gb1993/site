@@ -11,9 +11,8 @@
  $mail->SMTPAuth = true; // Caso o servidor SMTP precise de autenticação
  $mail->Username = "gbranco@dermage.com.br"; // SMTP username
  $mail->Password = "Derma2020."; // SMTP password
- $mail->From = "gbranco@dermage.com.br"; // From
- $mail->FromName = "Dermage" ; // Nome de quem envia o email
- $mail->AddAddress($mailDestino); // Email e nome de quem receberá //Responder
+ $mail->setFrom('gbranco@dermage.com.br', 'RH Dermage');
+ $mail->AddAddress($mailDestino); // Email e nome de quem receberá
  $mail->WordWrap = 50; // Definir quebra de linha
  $mail->IsHTML = true ; // Enviar como HTML
  $mail->Subject = $assunto ; // Assunto
