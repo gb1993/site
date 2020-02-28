@@ -1,8 +1,3 @@
-
-<?php
-include_once('conexao.php');
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -75,10 +70,22 @@ include_once('conexao.php');
           </div>
       </div>
 
+      <?php 
+        if ($_POST){
+          include("./phpmailer/src/phpmailer.php"); 
+          include("./phpmailer/src/smtp.php"); 
+          $mailDestino = $_POST['destinatario']; 
+          //$nome = $_POST['nome']; 
+          $mensagem = "";
+          $assunto = $_POST['assunto'];
+          include("./envio.php");
+        }
+      ?>
+
       <div class="container">
         <div class="row">
           <div class="col-md-6 mb-5 order-2">
-            <form action="envio.php" method="post">
+            <form method="post">
               <div class="row">
                 <div class="col-md-9 form-group">
                   <label><h5>Para</h5></label>
