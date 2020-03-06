@@ -74,8 +74,7 @@
         if ($_POST){
           include("/var/www/html/portal/PHPMailer/src/PHPMailer.php"); 
           include("/var/www/html/portal/PHPMailer/src/SMTP.php"); 
-          $mailDestino = $_POST['destinatario']; 
-          //$nome = $_POST['nome']; 
+          $mailDestino = $_POST['destinatario'];  
           $mensagem = '<html>
           <style>
           /* Linked Styles */

@@ -20,9 +20,7 @@
     <header role="banner">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+
     </header>
 
     <div class="top-shadow">
@@ -48,38 +46,56 @@
               </div>
             </div>
         </div>
+
+        <?php
+          if ($_SERVER ["REQUEST_METHOD"] === "POST"){
+            $nome = $_POST['nome'];
+            $identidade = $_FILES['identidade'];
+            $cpf = $_FILES['cpf'];
+            $foto = $_FILES['foto'];
+            $certidao = $_FILES['certidao'];
+            $residencia = $_FILES['residencia'];
+            $escolaridade = $_FILES['escolaridade'];
+            $eleitor = $_FILES['eleitor'];
+            include("./files.php");
+          }
+        ?>
         <div class="container element-animate border border-warning rounded ">
             <div class="row ">
                 <div class="col-md-6 m-5 order-2">
                     <form  method="post">
                         <div class="row">
                             <div class="col-md-8 mb-5">
+                                <h4>Nome Completo</h4>
+                                <input class="form-control" type="text" name="nome" required>
+                            </div>
+                            <div class="col-md-8 mb-5">
                                 <h4>Identidade</h4>
-                                <input type="file" id="identidade" required>
+                                <input type="file" name="identidade" >
                             </div>
                             <div class="col-md-4 mb-5">
                                 <h4>CPF</h4>
-                                <input type="file" id="cpf" required>
+                                <input type="file" name="cpf" >
                             </div>
                             <div class="col-md-8 mb-5">
                                 <h4>Foto 3x4</h4>
-                                <input type="file" id="foto" required>
+                                <input type="file" name="foto" >
                             </div>
                             <div class="col-md-4 mb-5">
                                 <h4>Certidão de Nascimento</h4>
-                                <input type="file" id="certidao" required>
+                                <input type="file" name="certidao" >
                             </div>
                             <div class="col-md-8 mb-5">
                                 <h4>Comprovante de Residência</h4>
-                                <input type="file" id="residencia" required>
+                                <input type="file" name="residencia" >
                             </div>
                             <div class="col-md-4 mb-5">
                                 <h4>Comprovante de Escolaridade</h4>
-                                <input type="file" id="escolaridade" required>
+                                <input type="file" name="escolaridade" >
                             </div>
                             <div class="col-md-8 mb-5">
                                 <h4>Título de Eleitor</h4>
-                                <input type="file" id="eleitor" required>
+                                <input type="file" name="eleitor" >
                             </div>
                         </div>
                         <div class="row">
@@ -130,14 +146,12 @@
 <footer>  
   <div class="row">
       <div class="col-12 text-md-center text-left">
-          <p>Dermage | Todos os direitos reservados</p>
+        <p>Dermage | Todos os direitos reservados</p>
       </div>
   </div>
 </footer>
 
     <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
