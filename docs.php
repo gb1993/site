@@ -228,7 +228,7 @@
           style="background:#66c7ff; color:#c1cddc;
           font-size:14px; line-height:18px; padding:12px
           30px; text-align:center; border-radius:0px 22px
-          22px 22px; font-weight:bold;"><a href="http://localhost/portal/form.php"
+          22px 22px; font-weight:bold;"><a href="http://l192.168.0.88/portal/form.php"
           target="_blank" class="link-white"
           style="color:#ffffff; text-decoration:none;"><span
           class="link-white" style="color:#ffffff;

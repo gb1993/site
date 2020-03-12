@@ -60,10 +60,11 @@
             include("./files.php");
           }
         ?>
+        
         <div class="container element-animate border border-warning rounded ">
             <div class="row ">
                 <div class="col-md-6 m-5 order-2">
-                    <form  method="post">
+                    <form  method="post" enctype="multipart/form-data">
                         <div class="row">
                             <div class="col-md-8 mb-5">
                                 <h4>Nome Completo</h4>
@@ -108,6 +109,7 @@
             </div>
         </div>
     </section>
+
 
 <div class="container">
   <div class="row mb-2">
